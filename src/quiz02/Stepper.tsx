@@ -1,7 +1,12 @@
-const Stepper = () => {
-
-  const step = 1;
-
+import  { useState } from 'react';
+interface Product {
+  id: number;
+  step: number;
+  name: string;
+  price: number;
+}
+const Stepper = ({step}: { step: number }) => {
+  
   return (
     <div className='stepper flex'>
         <h2 className={step == 1 ? 'active' : ''}>1</h2>
@@ -10,5 +15,6 @@ const Stepper = () => {
     </div>
   )
 }
+
 
 export default Stepper
